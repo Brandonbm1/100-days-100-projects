@@ -1,0 +1,124 @@
+/* -----------------
+Tabla de contenidos:
+--------------------
+1. Fuente ......................... 12
+2. Variables ...................... 16
+3. Estilos generales .............. 27
+4. Créditos ....................... 37
+-------------------- */
+
+
+/* ----- Fuente ----- */
+@import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
+
+
+/* ----- Variables ----- */
+* {
+	--primary-font-family: 'Montserrat', sans-serif;
+	--body-bg-color: #212020;
+	--card-bg-color: #242323;
+  --card-footer-bg-color: #1f1e1e;
+  --tag-color: #1e1d1d;
+	--text-color: #c2c2c2;
+	--fb-bg-color: #456da4;
+	--li-bg-color: #0984c6;
+	--ig-bg-color: #006184;
+  --tw-bg-color: #76a9ea;
+	--lh-text: 22px;
+}
+
+/*242323 card-bg */
+/*212020 body-bg*/ 
+/*585757 nationality-color*/
+/*1e1d1d*/
+
+
+
+
+/* ----------------------------- */
+/* ----- Estilos generales ----- */
+/* ----------------------------- */
+body {
+	font-family: var(--primary-font-family);
+	background-color: var(--body-bg-color);
+	color: var(--text-color);
+	line-height: var(--lh-text);
+
+	height: 100vh;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+  padding: 0 80px;
+}
+
+img {
+	width: 150px;
+	border-radius: 50%;
+}
+.card{
+  background-color: var(--card-bg-color);
+  padding: 40px 0 0;
+  border-radius: 10px;
+  text-align: center;
+  max-width: clamp(300px, 50%, 400px);
+  overflow: hidden;
+  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.2);
+}
+.card-main{
+  padding: clamp(1rem, 5%, 2rem);
+}
+.card-figure{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  
+  
+}
+.card-name{
+  font-size: 1.5rem;
+  font-weight: 900;
+
+}
+.card-nationality{
+  background: var(--tag-color);
+  max-width: fit-content;
+  padding: .25rem 1.25rem;
+  color: #585757;
+  font-weight: 900;
+  border-radius: 1rem;
+  font-size: 1.1rem;
+}
+.card-media{
+  background-color: var(--card-footer-bg-color);
+  padding: 1.2rem 0;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  font-size: 1.4rem;
+}
+i.tw{
+  color: var(--tw-bg-color)
+}
+i.fb{
+  color: var(--fb-bg-color)
+}
+i.li{
+  padding: .2rem;
+  border-radius: 2px;
+  background: var(--li-bg-color);
+  color: var(--card-footer-bg-color);
+  font-size: 1.2rem;
+}
+i:hover{
+  transform: scale(1.1) ;
+  transition: all .3s;
+  cursor: pointer;
+}
+
+/* ------------------------
+Diseño: UIDesign Daily🎨
+Desarrollo: Frontend Club🔥
+--------------------------- */
