@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:wght@400;600;800&display=swap');
+*{
+  --primary-font-family: 'Figtree', sans-serif;
+  --primary-bg-color: hsl(47, 88%, 63%);
+  --neutral-white-color:  hsl(0, 0%, 100%);
+  --neutral-grey-color:  hsl(0, 0%, 50%);
+  --neutral-black-color:  hsl(0, 0%,7%);
+}
+
+body{
+  background-color: var(--primary-bg-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: var(--primary-font-family);
+  
+}
+.card{
+  background-color: var(--neutral-white-color);
+  border: 1px solid black;
+  border-radius:  2rem;
+  padding: 1.5rem;
+  width: clamp(300px, 70%, 400px);
+  box-shadow: .6rem .6rem var(--neutral-black-color);
+}
+.card-main{
+  margin: 0;
+  padding: 0;
+}
+.card-figure{
+  margin: 0;
+  margin-bottom: 1rem;
+}
+.card-figure-img{
+  width: 100%;
+  border-radius: 1rem;
+  margin-bottom: 2rem;
+}
+.card-figure-caption{
+  font-size: .9rem;
+  font-weight: 800;
+  color: var(--neutral-black-color);
+  background-color: var(--primary-bg-color);
+  padding: .3rem .6rem;
+  border-radius: 4px;
+  display: inline;
+}
+.date{
+  font-size: .9rem;
+  color: var(--neutral-grey-color);
+  margin-bottom: 1rem;
+  font-weight: 800;
+}
+.title{
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  transition: color .1s ease;
+}
+.title:hover{
+  color: var(--primary-bg-color);
+
+}
+.description{
+  font-size: 1rem;
+  color: var(--neutral-grey-color);
+
+}
+.card-footer figure{
+  display: flex;
+  align-items: center;
+  margin: 1.5rem 0 .5rem 0;
+  gap: 1rem;
+}
+.card-footer figure img{
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+}
+.card-footer figure figcaption{
+  font-weight: 800;
+  color: var(--neutral-black-color);
+}
