@@ -1,0 +1,124 @@
+*{
+  --body-bg-color: #D2DDF6;
+  --card-bg-color: #F6F9FF;
+  --text-color: #12163C;
+
+  --blue-color-1: #96B3FF;
+  --blue-color-2: #6792FF;
+  --blue-color-3: #4473EA;
+  --blue-color-4: #1A52E1;
+}
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--body-bg-color);
+  height: 100vh;
+  font-family: 'Poppins', sans-serif;
+}
+.card{
+  background: var(--card-bg-color);
+  padding: 1rem 2rem 2rem;
+  border-radius: 1rem;
+  box-shadow: .4rem .4rem 0 .4rem #e5edff;
+  width: clamp(300px, 80%, 600px);
+}
+.card-header{
+  padding: 1.5rem 0;
+}
+.card-header-title{
+  font-family: 'Merriweather', serif;
+  font-size: 1.5rem;
+  margin-bottom: 0;
+}
+.card-header-subtitle{
+  font-size: .8rem;
+  margin-bottom: 1.5rem;
+}
+.card-content{
+  display: flex;
+  gap: 2rem;
+  margin: .5rem 0;
+}
+.card-content-aside{
+  flex-basis: 50%;
+}
+.card-analytic{
+  width: clamp(120px, 100%, 150px);
+  aspect-ratio: 1/1;
+  background: conic-gradient(
+  var(--blue-color-2) 135deg,
+  #fff 135deg 138deg,
+  var(--blue-color-3) 138deg 200deg,
+  #fff 200deg 203deg, 
+  var(--blue-color-4) 203deg 310deg, 
+  #fff 310deg 313deg,
+  var(--blue-color-1) 313deg 357deg,
+  #fff 357deg);
+  border-radius:50%;
+  position: relative;
+}
+.card-analytic::before{
+  position: absolute;
+  content: "";
+  height: 80%;
+  width: 80%;
+  background-color: #fff;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.card-analytic::after{
+  content: "Traffic Source";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.card-content-section{
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  width: clamp(300px, 100%, 600px);
+}
+.card-trafic{
+  display: flex;
+  gap: .5rem;
+  align-items: center;
+  /* justify-content: space-between; */
+  font-weight: 700;
+  position: relative;
+}
+.card-trafic-name{
+  flex-basis: 85%;
+}
+.card-trafic-bar{
+  position: absolute;
+  height: .5rem;
+  border-radius: 1rem; 
+  right: 15%;
+}
+.card-trafic:first-child .card-trafic-bar{
+  background: var(--blue-color-2);
+  width: 37%;
+}
+.card-trafic:nth-child(2) .card-trafic-bar{
+  background-color: var(--blue-color-3);
+  width: 30%;
+}
+.card-trafic:nth-child(3) .card-trafic-bar{
+  background-color: var(--blue-color-4);
+  width: 25%;
+}
+.card-trafic:nth-child(4) .card-trafic-bar{
+  background-color: var(--blue-color-1);
+  width: 15%;
+}
+.card-trafic:last-child{
+  color: var(--text-color);
+  justify-content: end;
+  color: var(--blue-color-4);
+  font-weight: 400;
+}
